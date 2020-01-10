@@ -80,7 +80,7 @@ def start():
         wallet_dir=f'{private_storage_dir}/lbryum',
         download_dir=configured_download_dir,
         blob_lru_cache_size=32,
-        components_to_skip=[DHT_COMPONENT, HASH_ANNOUNCER_COMPONENT, PEER_PROTOCOL_SERVER_COMPONENT],
+        components_to_skip=[HASH_ANNOUNCER_COMPONENT, PEER_PROTOCOL_SERVER_COMPONENT],
         save_blobs=False,
         save_files=False,
         use_upnp=False
