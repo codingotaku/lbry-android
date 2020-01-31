@@ -106,6 +106,8 @@ public class LbrynetMessagingService extends FirebaseMessagingService {
             }
         }
 
+        url = url + ((url.indexOf("?") > -1) ? "&liteMode=1" : "?liteMode=1");
+
         Intent launchIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         launchIntent.putExtra("notification_name", name);
         launchIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
